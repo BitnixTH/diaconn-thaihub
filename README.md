@@ -1,0 +1,2 @@
+- Official (Google Sites): https://sites.google.com/view/diaconn-thaihub/home
+- Mirror (GitHub Pages): https://bitnixth.github.io/diaconn-thaihub/
