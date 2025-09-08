@@ -1,68 +1,101 @@
 <!doctype html>
 <html lang="th">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>DIACONN Thai Hub — DIA:CONN (P8)</title>
-  <meta name="description"
-        content="DIACONN Thai Hub — ศูนย์ความรู้และชุมชนผู้ใช้แพลตฟอร์ม DIA:CONN ในไทย รวมคู่มือ P8, การตั้งค่าแอป, บทความ และกิจกรรม" />
+  <title>DIACONN Thai Hub — คู่มือ DIA:CONN (P8), แอป, บทความ และกิจกรรมในไทย</title>
+  <meta name="description" content="DIACONN Thai Hub – ศูนย์ความรู้และชุมชนสำหรับแพลตฟอร์ม DIA:CONN ในไทย: ตั้งค่า P8, คู่มือแอป, บทความ และกิจกรรม พร้อมลิงก์ไปยัง Google Site">
+  <meta name="robots" content="index,follow">
 
-  <!-- Canonical ไปยัง Google Site หลัก -->
-  <link rel="canonical" href="https://sites.google.com/view/diaconn-thaihub/" />
+  <!-- เลือก URL หลักให้ Google: ใช้ GitHub Pages -->
+  <link rel="canonical" href="https://bitnixth.github.io/diaconn-thaihub/">
 
-  <!-- Google Search Console verification: อย่าลบแท็กนี้ -->
-  <meta name="google-site-verification" content="xb1zMnm_r6iS_Xp2MVNLwjnvHVB_PmA1SsfWN9w38w4" />
+  <!-- ยืนยันกรรมสิทธิ์ Search Console (ห้ามลบ) -->
+  <meta name="google-site-verification" content="xb1zMnm_r6iS_Xp2MVNLwjnvHVB_PmA1SsfWN9w38w4">
 
-  <!-- Open Graph (ช่วยแชร์สื่อสังคม) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="DIACONN Thai Hub — DIA:CONN (P8)" />
-  <meta property="og:description"
-        content="ศูนย์ความรู้ DIA:CONN ในไทย: คู่มือ P8, การตั้งค่าแอป, บทความ และกิจกรรม" />
-  <meta property="og:url" content="https://bitnixth.github.io/diaconn-thaihub/" />
+  <!-- Open Graph / Twitter Card (อัปโหลดไฟล์ og.jpg ไว้ที่ราก repo) -->
+  <meta property="og:title" content="DIACONN Thai Hub">
+  <meta property="og:description" content="Guides for DIA:CONN in Thailand — P8 setup, app guides, articles, and events.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bitnixth.github.io/diaconn-thaihub/">
+  <meta property="og:site_name" content="DIACONN Thai Hub">
+  <meta property="og:image" content="https://bitnixth.github.io/diaconn-thaihub/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <!-- ปรับสไตล์นิดหน่อยให้สวยและอ่านง่าย -->
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "DIACONN Thai Hub",
+    "url": "https://bitnixth.github.io/diaconn-thaihub/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://bitnixth.github.io/diaconn-thaihub/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <style>
-    :root { --bg:#0b1020; --card:#111834; --txt:#e8f0ff; --sub:#9bb3ff; }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:linear-gradient(180deg, var(--bg), #0f1430 50%, #0b1020);
-      color:var(--txt); display:flex; min-height:100svh; align-items:center; justify-content:center;
-      padding:32px;
-    }
-    .card{
-      width:min(900px, 100%); background:var(--card); border:1px solid #2a376b;
-      border-radius:20px; padding:32px 28px; box-shadow:0 12px 40px rgba(0,0,0,.35);
-    }
-    h1{margin:0 0 8px; font-size:clamp(28px,4vw,38px); letter-spacing:.3px}
-    p.lead{margin:6px 0 22px; color:var(--sub)}
-    .btns{display:flex; gap:12px; flex-wrap:wrap}
-    a.btn{
-      text-decoration:none; padding:12px 18px; border-radius:12px; border:1px solid #3b4ea1;
-      background:#1a2360; color:#fff; font-weight:600; transition:.2s ease;
-    }
-    a.btn:hover{transform:translateY(-1px); box-shadow:0 8px 20px rgba(59,78,161,.35)}
-    .meta{margin-top:18px; font-size:13px; opacity:.8}
-    .meta a{color:#b9c7ff}
+    :root{--accent:#5bd6ff;}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;color:#1f2937;background:#fff;}
+    header{padding:2.5rem 1.25rem 1.25rem;text-align:center;border-bottom:1px solid #eef2f7}
+    h1{margin:0 0 .25rem;font-size:clamp(1.6rem,2.8vw,2.2rem);letter-spacing:.2px}
+    p.lead{margin:.25rem 0 0;color:#4b5563}
+    main{max-width:880px;margin:1.25rem auto;padding:0 1.25rem}
+    .card{border:1px solid #e5e7eb;border-radius:14px;padding:1rem;margin:.75rem 0}
+    .btn{display:inline-block;padding:.75rem 1.1rem;border:1px solid #e5e7eb;border-radius:12px;text-decoration:none}
+    .btn.primary{border-color:var(--accent);box-shadow:0 0 0 3px rgba(91,214,255,.15)}
+    .grid{display:grid;gap:.75rem}
+    @media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+    small,footer{color:#6b7280}
+    footer{padding:2rem 1.25rem;text-align:center}
   </style>
 </head>
 <body>
-  <main class="card">
+  <header>
     <h1>DIACONN Thai Hub</h1>
-    <p class="lead">ศูนย์ความรู้ &amp; ชุมชนผู้ใช้แพลตฟอร์ม <b>DIA:CONN</b> ในไทย —
-      คู่มือการตั้งค่า P8, วิธีใช้แอปเดียร์คอน, บทความ และกิจกรรม</p>
+    <p class="lead">คู่มือ DIA:CONN (P8), แอปเดียร์คอน, บทความ และกิจกรรมในประเทศไทย</p>
+  </header>
 
-    <div class="btns">
-      <a class="btn" href="https://sites.google.com/view/diaconn-thaihub/" target="_blank" rel="noopener">ไปยัง Google Site หลัก</a>
-      <a class="btn" href="https://bitnixth.github.io/diaconn-thaihub/sitemap.xml" target="_blank" rel="noopener">Sitemap</a>
-      <a class="btn" href="https://bitnixth.github.io/diaconn-thaihub/robots.txt" target="_blank" rel="noopener">Robots.txt</a>
+  <main>
+    <div class="card">
+      <p><strong>TH:</strong> ศูนย์ความรู้และชุมชนสำหรับผู้ใช้แพลตฟอร์ม <em>DIA:CONN</em> — ครบทั้งการตั้งค่า P8, คู่มือแอป, บทความ และกิจกรรม</p>
+      <p><strong>EN:</strong> Thailand community & knowledge for the DIA:CONN platform — P8 setup, app guides, articles, and events.</p>
+      <p>
+        <a class="btn primary" href="https://sites.google.com/view/diaconn-thaihub/home" rel="noopener" target="_blank">ไปที่ Google Site (หลัก)</a>
+        &nbsp; <a class="btn" href="https://bitnixth.github.io/diaconn-thaihub/" aria-current="page">GitHub Mirror</a>
+      </p>
     </div>
 
-    <p class="meta">
-      © DIACONN Thai Hub • Mirror page for verification &amp; SEO assist.
-      โปรดเก็บแท็ก <code>google-site-verification</code> ไว้เสมอ
-    </p>
+    <div class="grid">
+      <div class="card">
+        <h3>เริ่มต้นใช้งาน P8</h3>
+        <p>ขั้นตอนตั้งค่าอุปกรณ์ การเชื่อมต่อ และทิปที่ต้องรู้</p>
+        <p><a class="btn" href="https://sites.google.com/view/diaconn-thaihub/home">เปิดคู่มือ</a></p>
+      </div>
+      <div class="card">
+        <h3>คู่มือแอป DIA:CONN</h3>
+        <p>สอนใช้งานแอปเดียร์คอน ตั้งค่า แจ้งเตือน และการแชร์ข้อมูล</p>
+        <p><a class="btn" href="https://sites.google.com/view/diaconn-thaihub/home">ดูรายละเอียด</a></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>ลิงก์สำคัญ</h3>
+      <ul>
+        <li><a href="https://sites.google.com/view/diaconn-thaihub/home">หน้าแรก / Home</a></li>
+        <li><a href="https://sites.google.com/view/diaconn-thaihub/home">ชุมชน (Community)</a></li>
+        <li><a href="https://sites.google.com/view/diaconn-thaihub/home">ติดต่อเรา (Contact Us)</a></li>
+      </ul>
+    </div>
   </main>
+
+  <footer>
+    <small>© DIACONN Thai Hub · Mirror on GitHub Pages</small>
+  </footer>
 </body>
 </html>
