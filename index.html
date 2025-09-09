@@ -4,36 +4,42 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>DIACONN Thai Hub (Mirror) — ไปยัง Google Site</title>
-  <meta name="description" content="สำเนา (mirror) ของ DIACONN Thai Hub บน GitHub Pages หน้านี้จะพาไปยังเว็บไซต์หลักบน Google Sites" />
+  <!-- TITLE + DESCRIPTION (มี P8 และ G8) -->
+  <title>DIACONN Thai Hub — ตั้งค่า P8 และ G8, คู่มือแอป, บทความ และกิจกรรม (Mirror → Google Sites)</title>
+  <meta name="description"
+        content="DIACONN Thai Hub – ศูนย์ความรู้และชุมชนสำหรับแพลตฟอร์ม DIA:CONN ในไทย: ตั้งค่า P8 และ G8, คู่มือแอป, บทความ และกิจกรรม พร้อมลิงก์ไปยังเว็บไซต์หลักบน Google Sites." />
 
-  <!-- ให้ Google เลือก Google Sites เป็นหน้า canonical -->
-  <link rel="canonical" href="https://sites.google.com/view/diaconn-thaihub/" />
+  <!-- ให้ Google ยก Google Sites เป็นตัวจริง -->
+  <link rel="canonical" href="https://sites.google.com/view/diaconn-thaihub/home" />
 
-  <!-- กันไม่ให้มิเรอร์ถูกจัดทำดัชนี แต่ยังให้บอทตามลิงก์ไปได้ -->
+  <!-- กันมิเรอร์ไม่ให้ถูกจัดทำดัชนี แต่ยังให้บอทตามลิงก์ไปได้ -->
   <meta name="robots" content="noindex,follow" />
   <meta name="googlebot" content="noindex,follow" />
 
-  <!-- (ถ้าเคยใช้ยืนยัน Search Console ที่ฝั่ง GitHub Pages) เก็บไว้ได้ ไม่เป็นอันตราย -->
+  <!-- ถ้าเคยยืนยัน Search Console ฝั่ง GitHub Pages -->
   <meta name="google-site-verification" content="xb1zMnm_r6iS_Xp2MVNLwjnvHVB_PmA1SsfWN9w38w4" />
 
-  <!-- Social sharing: OG / Twitter (รูปอยู่ที่ราก repo: og-image.png) -->
+  <!-- Social sharing -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="DIACONN Thai Hub" />
-  <meta property="og:title" content="DIACONN Thai Hub (Mirror)" />
-  <meta property="og:description" content="คลิกเพื่อไปยังเว็บไซต์หลักบน Google Sites" />
-  <meta property="og:url" content="https://sites.google.com/view/diaconn-thaihub/" />
-  <meta property="og:image" content="https://bitnixth.github.io/diaconn-thaihub/og-image.png" />
+  <meta property="og:title" content="DIACONN Thai Hub — ตั้งค่า P8 และ G8, คู่มือแอป, บทความ และกิจกรรม" />
+  <meta property="og:description" content="ลิงก์มิเรอร์ไปยังเว็บไซต์หลักบน Google Sites (มีคู่มือการตั้งค่า P8 และ G8)" />
+  <meta property="og:url" content="https://sites.google.com/view/diaconn-thaihub/home" />
+  <meta property="og:image" content="https://bitnixtth.github.io/diaconn-thaihub/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="DIACONN Thai Hub (Mirror)" />
-  <meta name="twitter:description" content="คลิกเพื่อไปยังเว็บไซต์หลักบน Google Sites" />
-  <meta name="twitter:image" content="https://bitnixth.github.io/diaconn-thaihub/og-image.png" />
+  <meta name="twitter:title" content="DIACONN Thai Hub — ตั้งค่า P8 และ G8, คู่มือแอป, บทความ และกิจกรรม" />
+  <meta name="twitter:description" content="คลิกเพื่อไปยังเว็บไซต์หลักบน Google Sites (คู่มือ P8 และ G8)" />
+  <meta name="twitter:image" content="https://bitnixtth.github.io/diaconn-thaihub/og-image.png" />
 
-  <!-- Redirect เร็วสำหรับผู้ใช้ (ยังคง noindex สำหรับบอท) -->
-  <meta http-equiv="refresh" content="1; url=https://sites.google.com/view/diaconn-thaihub/" />
+  <!-- Redirect เร็วสำหรับผู้ใช้ -->
+  <meta http-equiv="refresh" content="1; url=https://sites.google.com/view/diaconn-thaihub/home" />
+  <script>
+    // เสริม: ถ้ามี JS ให้เปลี่ยนทันที (เร็วกว่า meta refresh)
+    location.replace("https://sites.google.com/view/diaconn-thaihub/home");
+  </script>
 
   <style>
     :root { color-scheme: light dark; }
@@ -41,16 +47,12 @@
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       margin: 0; min-height: 100svh; display: grid; place-items: center; background: #f6f7f9;
     }
-    .card {
-      max-width: 720px; background: #fff; border: 1px solid #e5e7eb; border-radius: 14px;
-      padding: 24px; box-shadow: 0 8px 30px rgba(0,0,0,.06); text-align: center;
-    }
+    .card { max-width: 720px; background: #fff; border: 1px solid #e5e7eb; border-radius: 14px;
+            padding: 24px; box-shadow: 0 8px 30px rgba(0,0,0,.06); text-align: center; }
     h1 { font-size: clamp(20px,3vw,28px); margin: 0 0 8px; }
     p { margin: 0 0 16px; color: #374151; }
-    a.btn {
-      display: inline-block; padding: 10px 16px; border-radius: 10px;
-      border: 1px solid #2563eb; text-decoration: none; color: #fff; background: #2563eb;
-    }
+    a.btn { display: inline-block; padding: 10px 16px; border-radius: 10px;
+            border: 1px solid #2563eb; text-decoration: none; color: #fff; background: #2563eb; }
     .note { font-size: 13px; color: #6b7280; margin-top: 10px; }
     img { max-width: 100%; height: auto; border-radius: 10px; border: 1px solid #e5e7eb; }
   </style>
@@ -59,9 +61,10 @@
   <div class="card">
     <img src="og-image.png" alt="DIACONN Thai Hub" width="600" height="315" loading="lazy" />
     <h1>กำลังพาไป <span lang="en">DIACONN Thai Hub</span> (เว็บไซต์หลัก)</h1>
+    <p>มีเนื้อหา <strong>ตั้งค่า P8 และ G8</strong> คู่มือแอป บทความ และกิจกรรม</p>
     <p>หากเบราว์เซอร์ไม่พาไปเองภายในไม่กี่วินาที ให้กดปุ่มด้านล่าง</p>
-    <p><a class="btn" href="https://sites.google.com/view/diaconn-thaihub/">ไปที่ Google Sites</a></p>
-    <p class="note">หน้านี้เป็น <strong>มิเรอร์</strong> บน GitHub Pages เพื่อแชร์ลิงก์และช่วยให้บอทติดตามไปยังเว็บไซต์หลัก</p>
+    <p><a class="btn" href="https://sites.google.com/view/diaconn-thaihub/home" target="_blank" rel="noopener">ไปที่ Google Sites</a></p>
+    <p class="note">หน้านี้เป็น <strong>มิเรอร์</strong> บน GitHub Pages เพื่อพาไปยังเว็บไซต์หลัก และให้บอทตามลิงก์ได้</p>
   </div>
 </body>
 </html>
